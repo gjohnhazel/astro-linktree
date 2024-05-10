@@ -5,15 +5,26 @@ import Chip from "../components/chip.astro";
 // Put all your links here
 const links: Link[] = [
   {
-    desc: "Example Project", // The text that will be rendered
-    link: "example.com", // The link
+    desc: "Portfolio", // The text that will be rendered
+    link: "johnhazel.com", // The link
     icon: "fa-solid fa-home", // An icon from Font Awesome: https://fontawesome.com/search?o=r&m=free
   },
   {
-    desc: "Cool Project",
-    link: "example.com",
-    icon: "fa-solid fa-store",
+    desc: "My Blog",
+    link: "blog.johnhazel.com",
+    icon: "fa-solid fa-rss",
   },
+  {
+    desc: "Church+",
+    link: "churchpl.us",
+    icon: "fa-solid fa-church",
+  },
+  {
+    desc: "Hazelize",
+    link: "hazelize.com",
+    icon: "fa-solid fa-code",
+  },
+  
 ];
 ---
 
@@ -53,7 +64,7 @@ const links: Link[] = [
     class='bg-[#1e1e1e] flex justify-center items-center w-screen h-screen font-[Geist] text-white'
   >
     <main class='w-[80%] flex flex-col gap-8'>
-      <h1 class='md:text-6xl text-4xl font-black text-center'>Your Name</h1>
+      <h1 class='md:text-6xl text-4xl font-black text-center'>John Hazel</h1>
       <div class='grid justify-center gap-4'>
         {
           links.map(({ desc, link, icon }) => {
@@ -62,12 +73,10 @@ const links: Link[] = [
         }
       </div>
       <div class='flex justify-center gap-8'>
-        <!-- Put some social links who have a definitive icon here: -->
-        <Chip link='youtube.com/' icon='fa-brands fa-youtube' />
-        <Chip link='github.com/' icon='fa-brands fa-github' />
-        <Chip link='x.com/' icon='fa-brands fa-x-twitter' />
+        <Chip link='https://github.com/gjohnhazel/' icon='fa-brands fa-github' />
+        <Chip link='https://www.linkedin.com/in/gjohnhazel/' icon='fa-brands fa-linkedin' />
       </div>
-      <p class='text-center mx-auto'>Some additional text, like your email</p>
+      <p class='text-center mx-auto'><a href="mailto:john@johnhazel.com">john@johnhazel.com</a></p>
     </main>
   </body>
 </html>
